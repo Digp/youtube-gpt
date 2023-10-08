@@ -1,3 +1,9 @@
+# Secret files
+openai.key
+
+# Old files
+tmp/
+
 # Results
 19*/
 20*/
