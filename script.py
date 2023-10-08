@@ -62,7 +62,8 @@ print(f"Using video called: {video_title}")
 outpath = f'{directory}/youtube_video.mp4'
 if not os.path.exists(outpath):
     try:    
-        mp4_video = youtube_video.streams.filter(file_extension="mp4").get_by_resolution("720p").download(filename=outpath)
+        #mp4_video = youtube_video.streams.filter(file_extension="mp4").get_by_resolution("720p").download(filename=outpath)
+        mp4_video = youtube_video.streams.filter(file_extension="mp4").get_by_resolution("144p").download(filename=outpath)
 
     except Exception:
         subprocess.run(["youtube-dl", "--recode-video", "mp4", youtube_link], check=True)
